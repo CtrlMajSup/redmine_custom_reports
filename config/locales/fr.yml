@@ -1,0 +1,26 @@
+fr:
+  label_custom_report_plural: "Graphique"
+  label_custom_report_view_all: "Vue global des graphiques"
+  label_custom_report_new: "Créer un nouveau graphique"
+  label_custom_report_public_list: "Liste des graphiques publiques"
+  label_custom_report_own_list: "Graphiques personnels"
+  label_custom_report_edit: "Editer le graphique"
+  label_series_filters: "Filtres"
+
+  label_chart_type_undev_pie: "Donut Légendé"
+  label_chart_type_pie: "Cammenbert"
+  label_chart_type_donut: "Donut"
+  label_chart_type_bar: "Histogramme Unique"
+  label_chart_type_horizontal_bar: "Barres Horizontales"
+  label_chart_type_stacked_bar: "Histogramme Mixte"
+
+  field_chart_type: "Type de graphique"
+  field_null_text: "Remplacer les valeur vide par :"
+  field_series_name: "Description du filtre"
+
+  message_custom_reports_created: "Graphique crée avec succés"
+  message_custom_reports_updated: "Graphique mis à jour"
+  message_custom_reports_destroyed: "Graphique supprimé"
+  message_cant_delete_last_series: "Il faut au moins un filtre"
+  message_add_custom_report_series: "Ajouter un filtre"
+  message_remove_custom_report_series: "Retirer un filtre"
