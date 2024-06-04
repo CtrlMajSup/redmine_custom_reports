@@ -2,7 +2,7 @@ Redmine::Plugin.register :redmine_custom_reports do
   name 'Redmine Custom Reports (with charts) plugin'
   author 'Restream'
   description 'Redmine plugin for custom reports with charts'
-  version '0.1.5'
+  version '2.0.1dev'
   url 'https://github.com/Restream/redmine_custom_reports'
   author_url 'https://github.com/Restream'
 
@@ -19,6 +19,3 @@ Redmine::Plugin.register :redmine_custom_reports do
        param:  :project_id,
        before: :settings
 end
-
-# Require plugin after register
-require 'redmine_custom_reports'

@@ -1,11 +1,11 @@
 class CustomReportsController < ApplicationController
   unloadable
 
-  before_filter :find_project_by_project_id
-  before_filter :authorize
-  before_filter :find_custom_reports, only: [:index, :show, :new, :edit]
-  before_filter :find_custom_report, only: [:show, :edit, :update, :destroy]
-  before_filter :authorize_to_manage, only: [:edit, :update, :destroy]
+  before_action :find_project_by_project_id
+  before_action :authorize
+  before_action :find_custom_reports, only: [:index, :show, :new, :edit]
+  before_action :find_custom_report, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_to_manage, only: [:edit, :update, :destroy]
 
   helper :queries
   include QueriesHelper
@@ -51,7 +51,8 @@ class CustomReportsController < ApplicationController
     end
 
     params.required(:custom_report).permit! if params.class.method_defined? :required
-    if @custom_report.update_attributes(params[:custom_report])
+    Rails.logger.info(params[:custom_report].inspect)
+    if @custom_report.update(params[:custom_report])
       redirect_to url_for(
         controller: 'custom_reports',
         action:     'show', project_id: @project, id: @custom_report.id),
